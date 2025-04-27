@@ -1,0 +1,1 @@
+export { Beaute } from "./Beaute";
