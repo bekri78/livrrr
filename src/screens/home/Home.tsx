@@ -48,7 +48,7 @@ export const Home = (): JSX.Element => {
           </div>
         </div>
 
-        <h1 className="absolute top-[297px] left-[153px] [font-family:'Futura_PT-Book',Helvetica] font-normal text-white text-[60.5px] tracking-[0] leading-normal">
+        <h1 className="absolute w-[100%] top-[200px] [font-family:'Futura_PT-Book',Helvetica] font-normal text-white text-[60.5px] tracking-[0] leading-normal  mx-auto display flex items-center justify-center">
           LIVRR
         </h1>
       </div>
