@@ -6,7 +6,7 @@ import { Card, CardContent } from "../../components/ui/card";
 export const Home = (): JSX.Element => {
   const navigate = useNavigate();
   return (
-    <div className="w-full max-w-[402px] h-[874px] bg-[#e2d8ce]">
+    <div className="w-full max-w-[100%] h-[100vh] bg-[#e2d8ce]">
       <div className="relative h-full">
         <div className="absolute w-full h-full top-0 left-0 [background:url(https://c.animaapp.com/m9zya50n7OZ9oB/img/iphone-16-pro---5.png)_50%_50%_/_cover,linear-gradient(0deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)]">
           <div className="relative h-[537px] top-[337px] backdrop-blur-sm backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4px)_brightness(100%)]">
