@@ -36,7 +36,7 @@ export const Home = (): JSX.Element => {
                   <Button
                    onClick={() => navigate("/guest-login")}
                     variant="outline"
-                    className="w-full border-white text-white hover:bg-white/10 hover:text-white rounded-none p-2.5"
+                    className="w-full bg-transparent border-white text-white hover:bg-white/10 hover:text-white rounded-none p-2.5"
                   >
                     <span className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs tracking-[0] leading-normal">
                       CONTINUE AS A GUEST
