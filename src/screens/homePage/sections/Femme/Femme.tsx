@@ -1,8 +1,10 @@
 
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent, CardFooter } from "../../../../components/ui/card";
 
 export const Femme = (): JSX.Element => {
+  const navigate = useNavigate();
   return (
     <Card
       className="relative w-full max-w-[100%] h-[455px] flex flex-col justify-end p-5 bg-cover bg-center"
@@ -21,7 +23,7 @@ export const Femme = (): JSX.Element => {
           variant="default"
           className="w-full bg-white text-black hover:bg-white/90 p-2.5 h-auto rounded-none"
         >
-          <span className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs">
+          <span onClick={() => navigate("/explore")} className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs">
             DECOUVRIR
           </span>
         </Button>

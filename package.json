@@ -3,15 +3,17 @@
     "version": "1.0.0",
     "homepage": "https://github.com/bekri78/livrrr",
     "scripts": {
-      "dev": "vite",
-      "build": "vite build",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d dist"
+        "dev": "vite",
+        "build": "vite build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "dependencies": {
+        "@radix-ui/react-accordion": "^1.2.8",
         "@radix-ui/react-aspect-ratio": "^1.1.4",
         "@radix-ui/react-separator": "^1.1.4",
         "@radix-ui/react-slot": "^1.1.0",
+        "@radix-ui/react-tabs": "^1.1.9",
         "class-variance-authority": "^0.7.0",
         "clsx": "2.1.1",
         "input-otp": "^1.4.2",

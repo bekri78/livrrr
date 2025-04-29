@@ -1,8 +1,10 @@
  
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const Homme = (): JSX.Element => {
+     const navigate = useNavigate();
   return (
     <Card
       className="relative w-full h-[455px] bg-no-repeat bg-cover bg-center"
@@ -20,7 +22,7 @@ export const Homme = (): JSX.Element => {
             variant="default"
             className="w-full bg-white text-black hover:bg-white/90 p-2.5 rounded-none"
           >
-            <span className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs tracking-[0] leading-normal">
+            <span onClick={() => navigate("/hommeArticles")}  className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs tracking-[0] leading-normal">
               DECOUVRIR
             </span>
           </Button>

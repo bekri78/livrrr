@@ -10,6 +10,8 @@ import { DeliveryOne } from "./screens/connexion";
 import { DeliveryTwo } from "./screens/connexion";
 import { CodeSms } from "./screens/connexion";
 import { HommePage } from "./screens/homePage/HomePage";
+import { HommeArticle } from "./screens/homeArticle/sections";
+import { Explore } from "./screens/explorePage/section";
 export const App = (): JSX.Element => {
   return (
     <Router>
@@ -23,6 +25,8 @@ export const App = (): JSX.Element => {
         <Route path="/delivery2" element={<DeliveryTwo />} />
         <Route path="/smsCode" element={<CodeSms />} />
         <Route path="/hommePage" element={<HommePage />} />
+        <Route path="/hommeArticles" element={<HommeArticle />} />
+        <Route path="/explore" element={<Explore />} />
       </Routes>
     </Router>
   );
