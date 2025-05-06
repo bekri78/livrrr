@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom"; // Importez useNavigate
 import {
   Accordion,
   AccordionContent,
@@ -8,27 +9,29 @@ import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const SeeAll = (): JSX.Element => {
-  // Category data for mapping
+  const navigate = useNavigate(); // Initialisation du hook
+
+  // Category data with route mapping
   const categories = [
-    "Nouveautés",
-    "Robes",
-    "Jupes",
-    "Pantalons",
-    "Tops",
-    "Manteaux et vestes",
-    "Maille",
-    "Accessoires",
-    "Chaussures",
-    "Chemises et chemisiers",
-    "Jeans",
-    "Tenues décontractés",
-    "Lingerie",
-    "Tailleurs",
-    "Tenues de sport",
-    "Maillots de bains",
-    "Voyage",
-    "Bijoux",
-    "Sacs",
+    { name: "Nouveautés", route: "/nouveautes" },
+    { name: "Robes", route: "/robes" },
+    { name: "Jupes", route: "/jupes" },
+    { name: "Pantalons", route: "/pantalons" },
+    { name: "Tops", route: "/tops" },
+    { name: "Manteaux et vestes", route: "/manteaux-vestes" },
+    { name: "Maille", route: "/maille" }, // Route vers la page mailles
+    { name: "Accessoires", route: "/accessoires" },
+    { name: "Chaussures", route: "/chaussures" },
+    { name: "Chemises et chemisiers", route: "/chemises-chemisiers" },
+    { name: "Jeans", route: "/jeans" },
+    { name: "Tenues décontractés", route: "/tenues-decontractees" },
+    { name: "Lingerie", route: "/lingerie" },
+    { name: "Tailleurs", route: "/tailleurs" },
+    { name: "Tenues de sport", route: "/tenues-sport" },
+    { name: "Maillots de bains", route: "/maillots-bains" },
+    { name: "Voyage", route: "/voyage" },
+    { name: "Bijoux", route: "/bijoux" },
+    { name: "Sacs", route: "/sacs" },
   ];
 
   // Brand images data
@@ -64,6 +67,7 @@ export const SeeAll = (): JSX.Element => {
                 <Button
                   variant="default"
                   className="flex w-[88px] h-[41px] items-center justify-center p-2.5 bg-white hover:bg-white/90 rounded-none"
+                  onClick={() => navigate("/nouveautes")}
                 >
                   <span className="relative w-fit [font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-xs tracking-[0] leading-[normal]">
                     DECOUVRIR
@@ -87,7 +91,10 @@ export const SeeAll = (): JSX.Element => {
           <div className="relative w-fit mt-[-1.00px] [font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-lg tracking-[0] leading-[normal]">
             BRANDS
           </div>
-          <div className="relative w-fit [font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-xs tracking-[0] leading-[normal]">
+          <div 
+            className="relative w-fit [font-family:'Futura_PT-Book',Helvetica] font-normal text-black text-xs tracking-[0] leading-[normal] cursor-pointer"
+            onClick={() => navigate("/brands")}
+          >
             SEE ALL
           </div>
         </div>
@@ -96,10 +103,11 @@ export const SeeAll = (): JSX.Element => {
           {brandImages.map((brand, index) => (
             <img
               key={index}
-              className={`relative object-cover`}
+              className={`relative object-cover cursor-pointer`}
               style={{ width: brand.width, height: brand.height }}
               alt="Brand logo"
               src={brand.src}
+              onClick={() => navigate(`/brand/${index + 1}`)}
             />
           ))}
         </div>
@@ -110,9 +118,12 @@ export const SeeAll = (): JSX.Element => {
         {categories.map((category, index) => (
           <Accordion key={index} type="single" collapsible className="w-full">
             <AccordionItem value={`item-${index}`} className="border-0">
-              <div className="flex items-center justify-between w-full">
+              <div 
+                className="flex items-center justify-between w-full cursor-pointer" 
+                onClick={() => navigate(category.route)}
+              >
                 <div className="relative w-fit mt-[-1.00px] [font-family:'General_Sans-Regular',Helvetica] font-normal text-black text-xs tracking-[0] leading-[normal]">
-                  {category}
+                  {category.name}
                 </div>
                 <ChevronRightIcon className="h-4 w-4" />
               </div>

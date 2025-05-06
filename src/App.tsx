@@ -12,6 +12,8 @@ import { CodeSms } from "./screens/connexion";
 import { HommePage } from "./screens/homePage/HomePage";
 import { HommeArticle } from "./screens/homeArticle/sections";
 import { Explore } from "./screens/explorePage/section";
+import { Mailles } from "./screens/mailles";
+import { Journal } from "./screens/journal";
 export const App = (): JSX.Element => {
   return (
     <Router>
@@ -27,6 +29,8 @@ export const App = (): JSX.Element => {
         <Route path="/hommePage" element={<HommePage />} />
         <Route path="/hommeArticles" element={<HommeArticle />} />
         <Route path="/explore" element={<Explore />} />
+        <Route path="/maille" element={<Mailles />} />
+        <Route path="/journal" element={<Journal />} />
       </Routes>
     </Router>
   );

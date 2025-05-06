@@ -1,1 +1,1 @@
-export { IphonePro } from "./Home";
+export { Home } from "./Home";
