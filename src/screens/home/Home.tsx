@@ -1,14 +1,21 @@
 
+
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
+import backgroundImage from "./img/home-img.webp"; // Ajustez le chemin selon l'emplacement réel
 
 export const Home = (): JSX.Element => {
   const navigate = useNavigate();
   return (
     <div className="w-full max-w-[100%] h-[100vh] bg-[#e2d8ce]">
       <div className="relative h-full">
-        <div className="absolute w-full h-full top-0 left-0 [background:url(https://c.animaapp.com/m9zya50n7OZ9oB/img/iphone-16-pro---5.png)_50%_50%_/_cover,linear-gradient(0deg,rgba(255,255,255,1)_0%,rgba(255,255,255,1)_100%)]">
+        <div 
+          className="absolute w-full h-full top-0 left-0" 
+          style={{ 
+            background: `url(${backgroundImage}) 50% 50% / cover, linear-gradient(0deg,rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%)` 
+          }}
+        >
           <div className="relative h-[537px] top-[337px] backdrop-blur-sm backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4px)_brightness(100%)]">
             <Card className="border-none bg-transparent">
               <CardContent className="flex flex-col w-[352px] items-start gap-8 pt-6 px-0 mx-auto">
