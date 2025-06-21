@@ -18,11 +18,11 @@ export const Homme = (): JSX.Element => {
           <h2 className="font-medium text-white text-[32px] [font-family:'Futura_PT-Medium',Helvetica] tracking-[0] leading-normal">
             HOMME
           </h2>
-          <Button
+          <Button onClick={() => navigate("/hommeArticles")} 
             variant="default"
             className="w-full bg-white text-black hover:bg-white/90 p-2.5 rounded-none"
           >
-            <span onClick={() => navigate("/hommeArticles")}  className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs tracking-[0] leading-normal">
+            <span  className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-xs tracking-[0] leading-normal">
               DECOUVRIR
             </span>
           </Button>
