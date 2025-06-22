@@ -62,7 +62,7 @@ import {
             className="p-0 h-auto"
             aria-label="Shopping basket"
           >
-            <ShoppingBasketIcon className="w-5 h-5" />
+            <ShoppingBasketIcon className="w-5 h-5"     onClick={() => navigate("/findYourArticles")} />
           </Button>
           <Button
             variant="ghost"

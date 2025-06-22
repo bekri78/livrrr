@@ -12,8 +12,10 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
   } from "../../../../components/ui/dropdown-menu";
+  import { useNavigate } from "react-router-dom";
   
   export const DeliveryTrackingSection = (): JSX.Element => {
+    const navigate = useNavigate();
     const deliveryOptions = ["Today", "Tomorrow", "Next Week"];
   
     return (
@@ -44,10 +46,10 @@ import {
         </div>
   
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon" className="h-10 w-10">
+          <Button onClick={() => { navigate("/findYourArticles")  }} variant="ghost" size="icon" className="h-10 w-10">
             <ShoppingBasketIcon className="w-5 h-5" />
           </Button>
-          <Button variant="ghost" size="icon" className="h-10 w-10">
+          <Button onClick={() => { navigate("/account")  }} variant="ghost" size="icon" className="h-10 w-10">
             <UsersIcon className="w-5 h-5" />
           </Button>
         </div>

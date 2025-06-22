@@ -29,7 +29,7 @@ import { SectionComponents } from "../homeArticle/sections/sectionComponents";
           </div>
   
           <div className="flex items-center gap-2">
-            <ShoppingCartIcon className="w-5 h-5" />
+            <ShoppingCartIcon className="w-5 h-5" onClick={() => { navigate("/findYourArticles")  }} />
             <UserIcon className="w-5 h-5" />
           </div>
         </header>

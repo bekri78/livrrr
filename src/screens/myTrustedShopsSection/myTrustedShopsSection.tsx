@@ -22,7 +22,7 @@ export const MyTrustedShopsSection = (): JSX.Element => {
         </div>
 
         <div className="flex items-center gap-2">
-          <ShoppingBasketIcon className="w-5 h-5" />
+          <ShoppingBasketIcon onClick={() => { navigate("/findYourArticles")  }} className="w-5 h-5" />
           <UserIcon className="w-5 h-5"   onClick={() => { navigate("/account")  }}/>
         </div>
       </header>

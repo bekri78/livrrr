@@ -14,11 +14,13 @@ import {
     AvatarFallback,
     AvatarImage,
   } from "../../components/ui/avatar";
+  import { useNavigate } from "react-router-dom";
   import { SectionComponents } from "../homeArticle/sections/sectionComponents";
   import { Button } from "../../components/ui/button";
   import { Separator } from "../../components/ui/separator";
   
   export const Chat = (): JSX.Element => {
+     const navigate = useNavigate();
     // Chat data for mapping
     const chats = [
       {
@@ -79,8 +81,8 @@ import {
           </div>
   
           <div className="inline-flex items-center gap-2 relative flex-[0_0_auto]">
-            <ShoppingBasketIcon className="relative w-5 h-5" />
-            <UsersIcon className="relative w-5 h-5" />
+            <ShoppingBasketIcon onClick={() => { navigate("/findYourArticles")  }} className="relative w-5 h-5" />
+            <UsersIcon onClick={() => { navigate("/account")  }} className="relative w-5 h-5" />
           </div>
         </div>
   

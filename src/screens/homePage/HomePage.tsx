@@ -45,6 +45,7 @@ export const HommePage = (): JSX.Element => {
 
         <div className="flex items-center justify-end gap-2">
           <img
+              onClick={() => navigate("/findYourArticles")}
             className="w-5 h-5"
             alt="Basket"
             src="https://c.animaapp.com/ma033d4fpeOHG4/img/basket-1.svg"
@@ -54,6 +55,8 @@ export const HommePage = (): JSX.Element => {
             alt="People circle"
             src= {accountImg}  // Adjust the path as necessary"
             onClick={() => navigate("/account")}
+         
+            
           />
         </div>
       </header>
