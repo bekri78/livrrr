@@ -133,16 +133,16 @@ import { SectionComponents } from "../homeArticle/sections/sectionComponents";
               </div>
             </div>
           </div>
-        </div>
-  
         {/* Payment button */}
-        <div className="flex flex-col w-[362px] items-center gap-2.5 absolute top-[763px] left-5">
+        <div className="flex flex-col w-[362px] items-center gap-2.5  mt-5 left-5">
           <Button  onClick={() => navigate('/payments')} className="w-full h-10 bg-black text-white rounded-none hover:bg-black/90">
             <span className="mt-[-1.00px] [font-family:'Futura_PT-Book',Helvetica] font-normal text-xs tracking-[0] leading-[normal]">
               PAY $200
             </span>
           </Button>
         </div>
+        </div>
+  
   
         {/* Top navigation */}
         <div className="flex w-[362px] items-center gap-16 absolute top-10 left-5">
