@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "../../../../components/ui/tabs";
 
 export const Navbar= (): JSX.Element => {

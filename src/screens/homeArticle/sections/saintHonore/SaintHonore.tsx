@@ -1,5 +1,6 @@
 import { StoreIcon } from "lucide-react";
 import { Card, CardContent } from "../../../../components/ui/card";
+import React from "react";
 
 // Product data for mapping
 const products = [
@@ -13,7 +14,7 @@ const products = [
   {
     id: 2,
     image: "https://c.animaapp.com/ma2wlpgp3a14sl/img/image.png",
-    name: "ARTICLE 1",
+    name: "ARTICLE 2",
     price: "60.90 EUR",
     store: "Saint honoré",
   },

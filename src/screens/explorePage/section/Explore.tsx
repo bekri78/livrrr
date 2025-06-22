@@ -10,7 +10,8 @@ import {
   import { Share } from "./share";
   import { SeeAll } from "./seeAll";
   import { Journal } from "./journal";
-  
+  import { SectionComponents } from "../../homeArticle/sections/sectionComponents";
+import React from "react";
   export const Explore = (): JSX.Element => {
     // Category tabs data
     const categories = [
@@ -73,6 +74,7 @@ import {
           <Journal />
           <Share />
         </main>
+         <SectionComponents />
       </div>
     );
   };

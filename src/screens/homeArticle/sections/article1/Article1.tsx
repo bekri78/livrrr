@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const Article1 = (): JSX.Element => {
@@ -6,13 +7,13 @@ export const Article1 = (): JSX.Element => {
   const products = [
     {
       id: 1,
-      title: "ARTICLE 1",
+      title: "ARTICLE ",
       price: "60.90 EUR",
       image: "https://c.animaapp.com/ma2wlpgp3a14sl/img/image-27-2.png",
     },
     {
       id: 2,
-      title: "ARTICLE 1",
+      title: "ARTICLE ",
       price: "60.90 EUR",
       image: "https://c.animaapp.com/ma2wlpgp3a14sl/img/image-27-2.png",
     },

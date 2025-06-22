@@ -1,9 +1,9 @@
 
-
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
-import backgroundImage from "./img/home-img.jpg"; // Ajustez le chemin selon l'emplacement réel
+import backgroundImage from "./img/home-img.webp"; // Ajustez le chemin selon l'emplacement réel
 
 export const Home = (): JSX.Element => {
   const navigate = useNavigate();

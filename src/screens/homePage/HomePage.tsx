@@ -1,3 +1,5 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { ChevronDownIcon, PackageIcon } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
@@ -15,9 +17,11 @@ import { Inspiration } from "./sections/Inspiration";
 import { Journal } from "./sections/Journal";
 import { PerfectLook } from "./sections/PerfectLook";
 import { SecondMain } from "./sections/SecondMain";
-
-
+import accountImg from './img/people-circle.svg'; // Assurez-vous que le chemin est correct
+import videoSummer from './video/spring-summer-video.mp4'; // Assurez-vous que le chemin est correct
+ 
 export const HommePage = (): JSX.Element => {
+    const navigate = useNavigate();
   return (
     <div className="flex flex-col w-full bg-white overflow-x-hidden">
       {/* Header */}
@@ -48,7 +52,8 @@ export const HommePage = (): JSX.Element => {
           <img
             className="w-5 h-5"
             alt="People circle"
-            src="https://c.animaapp.com/ma033d4fpeOHG4/img/people-circle.svg"
+            src= {accountImg}  // Adjust the path as necessary"
+            onClick={() => navigate("/account")}
           />
         </div>
       </header>
@@ -67,8 +72,21 @@ export const HommePage = (): JSX.Element => {
         <ArtDeVivre />
         <Gourmet />
          {/* Spring-Summer Section */}
-         <section className="w-full relative bg-[url(https://c.animaapp.com/ma033d4fpeOHG4/img/image-18.png)] bg-cover bg-[50%_50%] h-[455px]">
-          <div className="flex flex-col w-[362px] items-start gap-2 absolute bottom-5 left-5">
+         <section className="w-full relative h-[455px] overflow-hidden">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="absolute w-full h-full object-cover"
+          >
+            <source 
+              src={videoSummer} // Ensure the path is correct" 
+              type="video/mp4"
+            />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <div className="flex flex-col w-[362px] items-start gap-2 absolute bottom-5 left-5 z-10">
             <div className="w-fit [font-family:'Futura_PT-Medium',Helvetica] font-medium text-white text-[32px] tracking-[0] leading-[normal]">
               SPRING-SUMMER
             </div>
@@ -102,3 +120,4 @@ export const HommePage = (): JSX.Element => {
     </div>
   );
 };
+

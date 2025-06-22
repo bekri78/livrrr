@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 // Product data for mapping
@@ -6,7 +7,7 @@ const products = [
   {
     id: 1,
     image: "https://c.animaapp.com/ma2wlpgp3a14sl/img/image-1.png",
-    name: "ARTICLE 1",
+    name: "ARTICLE 3",
     price: "60.90 EUR",
     store: "Saint honoré",
     storeIcon: "https://c.animaapp.com/ma2wlpgp3a14sl/img/store-4.svg",
@@ -14,7 +15,7 @@ const products = [
   {
     id: 2,
     image: "https://c.animaapp.com/ma2wlpgp3a14sl/img/image-2.png",
-    name: "ARTICLE 1",
+    name: "ARTICLE 4",
     price: "60.90 EUR",
     store: "Saint honoré",
     storeIcon: "https://c.animaapp.com/ma2wlpgp3a14sl/img/store-4.svg",

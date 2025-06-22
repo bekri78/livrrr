@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { Card, CardContent } from "../../../../components/ui/card";
 
 export const Journal = (): JSX.Element => {
@@ -50,12 +51,8 @@ export const Journal = (): JSX.Element => {
                 alt="Journal article image"
                 src={article.image}
               />
-              <img
-                className="w-px h-14"
-                alt="Separator line"
-                src="https://c.animaapp.com/ma2vu314OllNwO/img/line-8.svg"
-              />
-              <div className="flex flex-col gap-1.5">
+             
+              <div className="flex flex-col gap-1.5 mt-10">
                 <div className="[font-family:'Futura_PT-Book',Helvetica] font-normal text-[#c6c4be] text-xs">
                   {article.category}
                 </div>

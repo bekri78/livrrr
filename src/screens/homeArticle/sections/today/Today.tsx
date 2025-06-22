@@ -4,10 +4,12 @@ import {
     ShoppingBasketIcon,
     UsersIcon,
   } from "lucide-react";
-  
+  import { useNavigate } from "react-router-dom";
   import { Button } from "../../../../components/ui/button";
+import React from "react";
   
   export const Today = (): JSX.Element => {
+     const navigate = useNavigate();
     return (
       <header className="flex w-full items-center justify-between gap-4 p-4">
         <Button
@@ -30,8 +32,8 @@ import {
           <Button variant="ghost" size="icon" className="p-0">
             <ShoppingBasketIcon className="w-5 h-5" />
           </Button>
-          <Button variant="ghost" size="icon" className="p-0">
-            <UsersIcon className="w-5 h-5" />
+          <Button onClick={() => { navigate("/account")  }} variant="ghost" size="icon" className="p-0">
+            <UsersIcon   className="w-5 h-5" />
           </Button>
         </div>
       </header>

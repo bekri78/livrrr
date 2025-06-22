@@ -1,0 +1,1 @@
+export { TrustedShopsSection } from "./TrustedShopsSection";

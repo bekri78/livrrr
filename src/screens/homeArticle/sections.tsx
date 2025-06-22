@@ -6,6 +6,7 @@ import { Today } from "./sections/today/Today";
 import { SaintHonore } from "./sections/saintHonore";
 import { SaintHonore2 } from "./sections/saintHonore2";
 import { SectionComponents } from "./sections/sectionComponents";
+import React from "react";
 
 export const HommeArticle = (): JSX.Element => {
   return (
